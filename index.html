@@ -1,133 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ingatlan Hirdetések</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Ingatlan Hirdetések</h1>
+    </header>
 
+    <main>
        
-        <div class="card">
-            <img src="Images/modernhazbudapestsziv.jpg" alt="Ház képe">
-            <h2>Modern családi ház Budapest belvárosában</h2>
-            <p><strong>Terület:</strong> 120 m²</p>
-            <p><strong>Helyzet:</strong> Budapest</p>
-            <p><strong>Szobák:</strong> 4</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Modern családi ház Budapest belvárosában')">Érdekel</a>
-        </div>
 
+        <section id="listings">
+            <h2>Elérhető Hirdetések</h2>
+            <!-- Statikus hirdetések -->
+            <div class="listing">
+                <img src="Images/modernhazbudapestsziv.jpg" alt="Ház 1">
+                <div class="details">
+                    <h3>Budapesti modern ház</h3>
+                    <p><strong>Terület:</strong> 200 m²</p>
+                    <p><strong>Helyzet:</strong> Budapest</p>
+                    <p><strong>Szobák száma:</strong> 3</p>
+                    <button onclick="sendInterest('Ház 1')">Érdekel</button>
+                </div>
+            </div>
+            <!-- További statikus hirdetések (összesen 12) -->
+            <div class="listing">
+                <img src="Images/videkihazkertel.jpfg.jpg" alt="Ház 2">
+                <div class="details">
+                    <h3>Falusi ház nyugodt környezet</h3>
+                    <p><strong>Terület:</strong> 120 m²</p>
+                    <p><strong>Helyzet:</strong> Debrecen</p>
+                    <p><strong>Szobák száma:</strong> 4</p>
+                    <button onclick="sendInterest('Ház 2')">Érdekel</button>
+                </div>
+            </div>
+            <div class="listing">
+                <img src="https://images.zenga.hu/thumbs/user_123054/ad_8285560/elado-panellakas-gyor-nadorvaros-107130807-t1.webp" alt="Ház 3">
+                <div class="details">
+                    <h3>Panel lakás a belváros szívében</h3>
+                    <p><strong>Terület:</strong> 80 m²</p>
+                    <p><strong>Helyzet:</strong> Győr</p>
+                    <p><strong>Szobák száma:</strong> 2</p>
+                    <button onclick="sendInterest('Ház 3')">Érdekel</button>
+                </div>
+            </div>
+            <div class="listing">
+                <img src="https://ot.ingatlancdn.com/15/0f/34017994_229503749_l.jpg?source=listing_card" alt="Ház 3">
+                <div class="details">
+                    <h3>Kisvárosi kertes ház</h3>
+                    <p><strong>Terület:</strong> 102 m²</p>
+                    <p><strong>Helyzet:</strong> Gyál</p>
+                    <p><strong>Szobák száma:</strong> 5</p>
+                    <button onclick="sendInterest('Ház 4')">Érdekel</button>
+                </div>
+            </div>
+           
+        </section>
+    </main>
+
+
+
+        <section id="add-listing">
+            <h2>Új Ingatlan Hozzáadása</h2>
+            <form id="addListingForm">
+                <label for="title">Cím:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="image">Kép URL:</label>
+                <input type="url" id="image" name="image" required>
+
+                <label for="area">Terület (m²):</label>
+                <input type="number" id="area" name="area" required>
+
+                <label for="location">Helyzet:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="rooms">Szobák száma:</label>
+                <input type="number" id="rooms" name="rooms" required>
+
+                <button type="submit">Hozzáadás</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
         
-        <div class="card">
-            <img src="Images/videkihazkertel.jpfg.jpg" alt="Ház képe">
-            <h2>Gyönyörű vidéki ház kerttel</h2>
-            <p><strong>Terület:</strong> 150 m²</p>
-            <p><strong>Helyzet:</strong> Debrecen</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Gyönyörű vidéki ház kerttel')">Érdekel</a>
-        </div>
+    </footer>
 
-        
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Felújított lakás a város szívében</h2>
-            <p><strong>Terület:</strong> 80 m²</p>
-            <p><strong>Helyzet:</strong> Szeged</p>
-            <p><strong>Szobák:</strong> 3</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Felújított lakás a város szívében')">Érdekel</a>
-        </div>
-
-       
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Hegyi nyaraló csodálatos kilátással</h2>
-            <p><strong>Terület:</strong> 100 m²</p>
-            <p><strong>Helyzet:</strong> Mátra</p>
-            <p><strong>Szobák:</strong> 3</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Hegyi nyaraló csodálatos kilátással')">Érdekel</a>
-        </div>
-
-        
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Panel lakás kiváló közlekedéssel</h2>
-            <p><strong>Terület:</strong> 60 m²</p>
-            <p><strong>Helyzet:</strong> Győr</p>
-            <p><strong>Szobák:</strong> 2</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-       
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-
-        <div class="card">
-            <img src="https://via.placeholder.com/800x400" alt="Ház képe">
-            <h2>Kertes ház nyugodt környéken</h2>
-            <p><strong>Terület:</strong> 96 m²</p>
-            <p><strong>Helyzet:</strong> Gyál</p>
-            <p><strong>Szobák:</strong> 5</p>
-            <a class="btn" onclick="sendInterest('tartam331@hengersor.hu', 'Panel lakás kiváló közlekedéssel')">Érdekel</a>
-        </div>
-
-        
-
-
-    <script src="java.js"></script>
+    <script src="java.js" defer></script>
 </body>
 </html>
